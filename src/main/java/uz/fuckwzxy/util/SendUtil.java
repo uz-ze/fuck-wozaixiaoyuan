@@ -62,6 +62,7 @@ public class SendUtil {
         request.form("size", 5);
         //得到返回的JSON并解析
         String body = request.execute().body();
+        //System.out.println(user.getName() + ":" + body);
         JSONObject data = (JSONObject) ((JSONArray) JSONUtil.parseObj(body).get("data")).get(0);
         return new SignMessage((String) data.getObj("id"), (String) data.get("logId"));
     }
@@ -88,6 +89,7 @@ public class SendUtil {
         //request.cookie(new HttpCookie("SESSION", user.getSession()), new HttpCookie("path", "/"));
         //content-type
         request.contentType("application/json");
+        request.execute();
         log.info("{}同学调用了{}，完成了{}，接口地址是{}",
                 user.getName(), signApi.getName(), signApi.getType().equals(ApiConstant.TYPE_CHECK) ? "三检" : "签到", signApi.getUrl());
     }

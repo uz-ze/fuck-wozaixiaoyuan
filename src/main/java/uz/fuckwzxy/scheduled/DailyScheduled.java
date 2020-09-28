@@ -38,9 +38,10 @@ public class DailyScheduled {
         checkService.eveningCheck();
     }
 
-    //@Scheduled(cron = "10 1 20 * * *")
-    //public void signIn() {
-    //    log.info("开始进行签到......");
-    //    checkService.singIn();
-    //}
+    //20点5分10秒
+    @Scheduled(cron = "10 5 20 * * *")
+    public void signIn() {
+        log.info("开始进行签到......");
+        checkService.singIn();
+    }
 }
