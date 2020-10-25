@@ -2,6 +2,7 @@ package uz.fuckwzxy.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.ToString;
 
 /**
  * @author wzh
@@ -9,6 +10,7 @@ import lombok.Data;
  */
 @Data
 @AllArgsConstructor
+@ToString
 public class SignMessage {
     private String id;
     private String logId;
