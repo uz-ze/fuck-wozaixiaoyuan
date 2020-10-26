@@ -39,6 +39,7 @@ public class A {
     @RequestMapping("/gogo")
     public void gogo() {
         checkService.singIn();
+        System.out.println();
     }
     @Autowired
     SendUtil sendUtil;
