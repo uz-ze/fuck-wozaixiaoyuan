@@ -3,8 +3,8 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://106.52.132.89:3306/fkwzxy?useSSL=false&serverTimezone=GMT
-    password: wzh.000.
+    url: jdbc:mysql:///fkwzxy?useSSL=false&serverTimezone=GMT
+    password: root
     username: root
     driver-class-name: com.mysql.cj.jdbc.Driver
 
